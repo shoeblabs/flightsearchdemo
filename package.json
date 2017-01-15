@@ -1,0 +1,13 @@
+{
+  "name": "flight-search-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm i && bower install && node ./server/bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "debug": "~2.2.0",
+    "express": "~4.13.1"
+  }
+}
