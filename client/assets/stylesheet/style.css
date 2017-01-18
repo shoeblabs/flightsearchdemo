@@ -18,7 +18,8 @@ body {
   flex-direction: column;
   font-size: 100%;
   font-family: 'Open Sans', sans-serif;
-  background: #f5f5f5;
+  background: #f5f5f5 url('/assets/img/bg1.jpg');
+  background-size: cover;
 }
 .fsd-primary {
   background-color: #673AB7;
@@ -35,6 +36,27 @@ body {
 }
 .block:after {
   clear: both;
+}
+.mg-btm10 {
+  margin-bottom: 10px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-center {
+  text-align: center;
 }
 div,
 section,
@@ -68,9 +90,16 @@ footer {
   display: -webkit-flex;
   display: flex !important;
   flex-direction: row;
+  align-items: stretch;
 }
 .flex-item {
   flex: 1;
+}
+.flex-apart {
+  align-items: stretch;
+}
+.inline {
+  display: inline-block;
 }
 /*--- header ---*/
 header {
@@ -78,6 +107,7 @@ header {
   width: 100%;
   height: 55px;
   display: block;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 header .head {
   position: fixed;
@@ -102,8 +132,74 @@ header .brand-title {
 /*----------- main -----------*/
 .page-content {
   flex: 1;
+  background: url('/assets/img/overlay-pattern.png');
 }
 /*----------- home page -----------*/
+.searchForm {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+}
+.white-box {
+  position: relative;
+  width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  height: inherit;
+  padding: 30px;
+}
+.white-box input[type="text"] {
+  border: 1px solid #c9c9c9;
+  height: 36px;
+  width: 250px;
+  padding: 0 10px;
+}
+.tripType {
+  margin-bottom: 20px;
+}
+.tripType input {
+  font-size: 1em;
+  height: 17px;
+  width: 17px;
+  margin: 2px 5px 0 0;
+  float: left;
+}
+.tripType label {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #555;
+  float: left;
+  margin-right: 30px;
+}
+input[type="text"]:hover {
+  border: 1px solid #aaa;
+}
+input:focus {
+  outline: none;
+}
+.btn {
+  height: 38px;
+  line-height: 38px;
+  font-size: 1.1em;
+  border: 0;
+  background: #ccc;
+  padding: 0 30px;
+  color: #555;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+}
+.btn:focus {
+  outline: none;
+}
+.btn-primary {
+  background: #673AB7;
+  color: #fff;
+}
 /*----- footer -----*/
 footer {
   background-color: #222;

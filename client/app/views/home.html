@@ -1,13 +1,31 @@
-<div class="container">
-    <div class="flex-row">
-    	<div class="flex-item">
-    		<input type="text" placeholder="From">
-    	</div>
-        <div class="flex-item">
-            <input type="text" placeholder="To">
+<div class="block searchForm">
+    <div class="white-box">
+        <div class="block tripType" data-ng-init="trip.roundTrip = 'false'">
+            <label> <input type="radio" data-ng-model="trip.roundTrip" value='false' /> One Way </label>
+            <label> <input type="radio" data-ng-model="trip.roundTrip" value='true' /> Round Trip </label>
         </div>
-        <div class="flex-item">
-            <input type="text" placeholder="Departure">
+        <div class="flex-row mg-btm10">
+            <div class="flex-item">
+                <input type="text" placeholder="From" data-ng-model="trip.from" list="city">
+                <datalist id="city">
+                    <option>Delhi</option>
+                    <option>Banglore</option>
+                </datalist>
+            </div>
+            <div class="flex-item text-center">
+                <input type="text" class="inline" placeholder="To" data-ng-model="trip.to" list="city">
+            </div>
+            <div class="flex-item">
+                <input type="text" class="right" placeholder="Departure" data-ng-model="trip.dateDeparture">
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-item" ng-show="trip.roundTrip=='true'">
+                <input type="text" placeholder="Return" data-ng-model="trip.dateReturn">
+            </div>
+            <div class="flex-item">
+                <button class="btn btn-primary right fix-align">Search</button>
+            </div>
         </div>
     </div>
 </div>
